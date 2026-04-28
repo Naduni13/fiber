@@ -39,7 +39,7 @@ export default function Navbar() {
         }}
       >
         <Image
-          src="/logo.png"
+          src="/logo2.png"
           alt="Hayleys Fibre"
           width={200}
           height={60}
