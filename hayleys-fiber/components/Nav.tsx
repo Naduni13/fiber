@@ -50,11 +50,11 @@ export default function Navbar() {
         <div className="lg:hidden bg-white text-black flex flex-col gap-4 px-6 py-4 shadow-md">
           <Link href="/">Home</Link>
           <Link href="/about">About Us</Link>
-          <Link href="/products">Products</Link>
-          <Link href="/facilities">Production Facilities</Link>
-          <Link href="/research">R&D</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/blogs">Blogs</Link>
+          <Link href="/">Products</Link>
+          <Link href="/">Production Facilities</Link>
+          <Link href="/">R&D</Link>
+          <Link href="/">Contact</Link>
+          <Link href="/">Blogs</Link>
         </div>
       )}
 
@@ -80,9 +80,9 @@ export default function Navbar() {
           <nav className="flex-1 flex justify-center gap-10 text-black">
             <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
-            <Link href="/products">Products</Link>
-            <Link href="/facilities">Production Facilities</Link>
-            <Link href="/research">Research & Development</Link>
+            <Link href="/">Products</Link>
+            <Link href="/">Production Facilities</Link>
+            <Link href="/">Research & Development</Link>
           </nav>
         </div>
       </div>
