@@ -4,105 +4,115 @@ import React, { useRef } from "react";
 import Image from "next/image";
 
 const historyImages = [
-  { src: "/history_1.png", alt: "Hayleys historical photo 1" },
-  { src: "/history_2.png", alt: "Hayleys historical photo 2" },
-  { src: "/history_1.png", alt: "Hayleys historical photo 3" },
-  { src: "/history_2.png", alt: "Hayleys historical photo 4" },
-  { src: "/history_1.png", alt: "Hayleys historical photo 5" },
+  { src: "/history_1.png", alt: "1" },
+  { src: "/history_2.png", alt: "2" },
+  { src: "/history_1.png", alt: "3" },
+  { src: "/history_2.png", alt: "4" },
+  { src: "/history_1.png", alt: "5" },
+  { src: "/history_2.png", alt: "6" },
 ];
 
 export default function History() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 320, behavior: "smooth" });
-    }
-  };
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
 
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -320, behavior: "smooth" });
-    }
+    const card = scrollRef.current.querySelector("div");
+    if (!card) return;
+
+    const gap = 24; // gap-6
+    const amount = card.clientWidth + gap;
+
+    scrollRef.current.scrollBy({
+      left: dir === "left" ? -amount : amount,
+      behavior: "smooth",
+    });
   };
 
   return (
-    <section className="bg-white py-16 px-4 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+    <section className="bg-[#f5f5f5] py-20 px-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
         
-        {/* Left: Text content */}
-        <div className="w-full lg:w-[320px] shrink-0">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
-            Our Journey Since 1878
+        {/* LEFT SIDE */}
+        <div className="w-full lg:w-1/2">
+          <h2 className="font-bold text-[#0f172a] leading-tight text-[42px] sm:text-[42px]">
+            Our Journey Since <br />
+            <span className="text-green-700">1878</span>
           </h2>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            Hayleys PLC Sri Lanka is a multiple award-winning blue-chip
-            conglomerate which commenced operations in 1878 as Chas P. Hayley
-            &amp; Company. Today, we encompass 16 diversified business sectors.
+
+          <p className="mt-6 text-gray-600 text-[15px] leading-relaxed max-w-lg">
+            Hayleys PLC stands as one of Sri Lanka’s most prominent and diversified blue-chip conglomerates, with a legacy that dates back to 1878 when it began operations as Chas P. Hayley & Company. Over nearly a century and a half, the organization has evolved from a modest trading enterprise into a global business powerhouse, playing a pivotal role in the economic and industrial development of the nation. 
           </p>
         </div>
 
-        {/* Right: Horizontally scrollable images */}
-        <div className="relative w-full flex-1 overflow-hidden">
-          {/* Scroll Left Button */}
+        {/* RIGHT SIDE */}
+        <div className="relative w-full lg:w-1/2">
+          
+          {/* LEFT ARROW */}
           <button
-            onClick={scrollLeft}
-            aria-label="Scroll left"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-md w-9 h-9 flex items-center justify-center hover:bg-gray-100 transition"
+            onClick={() => scroll("left")}
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white w-11 h-11 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4 text-gray-700"
+              className="w-5 h-5 text-gray-700"
               fill="none"
-              viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
+              viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              <path d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
-          {/* Scrollable Image Strip */}
+          {/* SCROLL AREA */}
           <div
             ref={scrollRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-10"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            className="flex gap-6 overflow-x-auto scroll-smooth px-16 snap-x snap-mandatory no-scrollbar"
           >
-            {historyImages.map((image, index) => (
+            {historyImages.map((img, i) => (
               <div
-                key={index}
-                className="relative shrink-0 w-[260px] sm:w-[300px] h-[260px] sm:h-[300px] overflow-hidden rounded-sm"
+                key={i}
+                className="relative shrink-0 w-[340px] h-[480px] snap-start"
               >
                 <Image
-                  src={image.src}
-                  alt={image.alt}
+                  src={img.src}
+                  alt={img.alt}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 640px) 260px, 300px"
                 />
               </div>
             ))}
           </div>
 
-          {/* Scroll Right Button */}
+          {/* RIGHT ARROW */}
           <button
-            onClick={scrollRight}
-            aria-label="Scroll right"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-md w-9 h-9 flex items-center justify-center hover:bg-gray-100 transition"
+            onClick={() => scroll("right")}
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white w-11 h-11 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4 text-gray-700"
+              className="w-5 h-5 text-gray-700"
               fill="none"
-              viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
+              viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              <path d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </div>
       </div>
+
+      {/* HIDE SCROLLBAR */}
+      <style jsx>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
 }
