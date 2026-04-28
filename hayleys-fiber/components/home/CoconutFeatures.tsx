@@ -45,7 +45,7 @@ export default function CoconutFeatures() {
                 <span className="w-6 h-6 bg-[#b89b5e] rounded-full flex-shrink-0"></span>
 
                 {/* BIG TEXT */}
-                <span className="text-xl md:text-2xl font-semibold text-gray-900">
+                <span className="text-xl md:text-2xl text-gray-900">
                   {item}
                 </span>
 
