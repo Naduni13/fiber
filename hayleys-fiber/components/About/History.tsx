@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
+import AnimatedText from "../AnimatedText";
 
 const historyImages = [
   { src: "/history_1.png", alt: "1" },
@@ -36,14 +37,18 @@ export default function History() {
         
         {/* LEFT SIDE */}
         <div className="w-full lg:w-1/2">
-          <h2 className="font-bold text-[#0f172a] leading-tight text-[42px] sm:text-[42px]">
-            Our Journey Since <br />
-            <span className="text-green-700">1878</span>
-          </h2>
+          <AnimatedText>
+            <h2 className="font-bold text-[#0f172a] leading-tight text-[42px] sm:text-[42px]">
+              Our Journey Since <br />
+              <span className="text-green-700">1878</span>
+            </h2>
+          </AnimatedText>
 
-          <p className="mt-6 text-gray-600 text-[15px] leading-relaxed max-w-lg">
-            Hayleys PLC stands as one of Sri Lanka’s most prominent and diversified blue-chip conglomerates, with a legacy that dates back to 1878 when it began operations as Chas P. Hayley & Company. Over nearly a century and a half, the organization has evolved from a modest trading enterprise into a global business powerhouse, playing a pivotal role in the economic and industrial development of the nation. 
-          </p>
+          <AnimatedText>
+            <p className="mt-6 text-gray-600 text-[15px] leading-relaxed max-w-lg">
+              Hayleys PLC stands as one of Sri Lanka’s most prominent and diversified blue-chip conglomerates, with a legacy that dates back to 1878 when it began operations as Chas P. Hayley & Company. Over nearly a century and a half, the organization has evolved from a modest trading enterprise into a global business powerhouse, playing a pivotal role in the economic and industrial development of the nation. 
+            </p>
+          </AnimatedText>
         </div>
 
         {/* RIGHT SIDE */}

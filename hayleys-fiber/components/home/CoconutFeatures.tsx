@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import AnimatedText from "../AnimatedText";
 
 const features = [
   "Renewable & Sustainable",
@@ -17,10 +18,12 @@ export default function CoconutFeatures() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADING */}
-        <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight text-center md:text-left mb-16">
-          Unique Features of{" "}<br />
-          <span className="text-green-700">Coconut</span> Fibre
-        </h2>
+        <AnimatedText>
+          <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight text-center md:text-left mb-16">
+            Unique Features of{" "}<br />
+            <span className="text-green-700">Coconut</span> Fibre
+          </h2>
+        </AnimatedText>
 
         {/* CONTENT */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -45,9 +48,11 @@ export default function CoconutFeatures() {
                 <span className="w-6 h-6 bg-[#b89b5e] rounded-full flex-shrink-0"></span>
 
                 {/* BIG TEXT */}
-                <span className="text-xl md:text-2xl text-gray-900">
-                  {item}
-                </span>
+                <AnimatedText>
+                  <span className="text-xl md:text-2xl text-gray-900">
+                    {item}
+                  </span>
+                </AnimatedText>
 
               </li>
             ))}

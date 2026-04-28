@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import AnimatedText from "../AnimatedText";
 
 const features = [
   {
@@ -37,13 +38,17 @@ export default function WhyChooseUs() {
       <div className="bg-[#f5f5f5] py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
           
-          <h2 className="text-3xl md:text-4xl font-bold text-green-700">
-            Why Choose Us
-          </h2>
+          <AnimatedText>
+            <h2 className="text-3xl md:text-4xl font-bold text-green-700">
+              Why Choose Us
+            </h2>
+          </AnimatedText>
 
-          <p className="mt-6 text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Rileys manufactures and supply the ultimate collection of floor mats in Sri Lanka to keep muddy footprints off your floors. Our portfolio offers coir product options for all applications in the home to keep dust away and floors cleaner for longer. We offer floor mats for both indoors and outdoors to stop dirt at the door. Our in house creative team is constantly looking at new trends to offer the very latest designs and functionality in our floor mats and other coir products.
-          </p>
+          <AnimatedText>
+            <p className="mt-6 text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Rileys manufactures and supply the ultimate collection of floor mats in Sri Lanka to keep muddy footprints off your floors. Our portfolio offers coir product options for all applications in the home to keep dust away and floors cleaner for longer. We offer floor mats for both indoors and outdoors to stop dirt at the door. Our in house creative team is constantly looking at new trends to offer the very latest designs and functionality in our floor mats and other coir products.
+            </p>
+          </AnimatedText>
 
           {/* FEATURES */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mt-16">
@@ -60,9 +65,11 @@ export default function WhyChooseUs() {
                   />
                 </div>
 
-                <p className="text-sm text-gray-700 font-medium max-w-[200px] leading-snug">
-                  {item.title}
-                </p>
+                <AnimatedText>
+                  <p className="text-sm text-gray-700 font-medium max-w-[200px] leading-snug">
+                    {item.title}
+                  </p>
+                </AnimatedText>
               </div>
             ))}
           </div>
@@ -74,11 +81,13 @@ export default function WhyChooseUs() {
       <div className="bg-[#eeeeee] py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
           
-          <h3 className="text-2xl md:text-3xl font-semibold text-black leading-snug">
-            Global <span className="text-green-700">Certifications</span> Reflecting Our Commitment to
-            <br />
-            Quality, Sustainability, and Ethical Standards
-          </h3>
+          <AnimatedText>
+            <h3 className="text-2xl md:text-3xl font-semibold text-black leading-snug">
+              Global <span className="text-green-700">Certifications</span> Reflecting Our Commitment to
+              <br />
+              Quality, Sustainability, and Ethical Standards
+            </h3>
+          </AnimatedText>
 
           {/* CERT LOGOS */}
           <div className="flex flex-wrap justify-center items-center gap-16 mt-14">

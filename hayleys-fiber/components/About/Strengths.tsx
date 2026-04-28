@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import AnimatedText from "../AnimatedText";
 
 const strengths = [
   {
@@ -37,9 +38,11 @@ export default function Strengths() {
     <section className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-4xl font-bold text-gray-900 mb-14">
-          Our Key <span className="text-green-700">Strengths</span>
-        </h2>
+        <AnimatedText>
+          <h2 className="text-center text-4xl font-bold text-gray-900 mb-14">
+            Our Key <span className="text-green-700">Strengths</span>
+          </h2>
+        </AnimatedText>
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -60,14 +63,18 @@ export default function Strengths() {
               </div>
 
               {/* Title */}
-              <h3 className="text-base font-bold text-gray-900 mb-3 leading-snug">
-                {item.title}
-              </h3>
+              <AnimatedText>
+                <h3 className="text-base font-bold text-gray-900 mb-3 leading-snug">
+                  {item.title}
+                </h3>
+              </AnimatedText>
 
               {/* Description */}
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {item.description}
-              </p>
+              <AnimatedText>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </AnimatedText>
             </div>
           ))}
         </div>

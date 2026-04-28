@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import AnimatedText from "../AnimatedText";
 
 export default function Sustainability() {
   return (
@@ -13,16 +14,20 @@ export default function Sustainability() {
         <div className="w-full lg:w-1/2 flex items-center z-10">
           <div className="pl-6 sm:pl-10 md:pl-16 lg:pl-2 max-w-lg text-white">
             
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-              Our Sustainability <br />
-              Approach
-            </h2>
+            <AnimatedText>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+                Our Sustainability <br />
+                Approach
+              </h2>
+            </AnimatedText>
 
-            <p className="mt-5 text-white/80 text-sm md:text-base leading-relaxed">
-              Hayleys Fibre puts people, planet and profit first — delivering
-              sustainable, tailor-made coir solutions while reducing waste,
-              protecting communities, and shrinking our carbon footprint.
-            </p>
+            <AnimatedText>
+              <p className="mt-5 text-white/80 text-sm md:text-base leading-relaxed">
+                Hayleys Fibre puts people, planet and profit first — delivering
+                sustainable, tailor-made coir solutions while reducing waste,
+                protecting communities, and shrinking our carbon footprint.
+              </p>
+            </AnimatedText>
 
             <button className="mt-8 bg-[#c5a46d] text-black px-8 py-3 text-sm font-medium hover:opacity-90 transition">
               Read More

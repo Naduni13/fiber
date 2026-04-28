@@ -1,5 +1,7 @@
 "use client";
 
+import AnimatedText from "../AnimatedText";
+
 export default function AboutSection() {
   return (
     <section className="w-full bg-white py-16 sm:py-20 md:py-24 px-6 sm:px-10 md:px-16 lg:px-24">
@@ -7,24 +9,30 @@ export default function AboutSection() {
         
         {/* LEFT CONTENT */}
         <div>
-          <p className="text-sm text-gray-500 mb-3">
-            Hayleys Fibre
-          </p>
+          <AnimatedText>
+            <p className="text-sm text-gray-500 mb-3">
+              Hayleys Fibre
+            </p>
+          </AnimatedText>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-black">
-            Global Leaders in <br />
-            Sustainable Coir{" "}
-            <span className="text-[#3f6f45]">Solutions</span>
-          </h2>
+          <AnimatedText>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-black">
+              Global Leaders in <br />
+              Sustainable Coir{" "}
+              <span className="text-[#3f6f45]">Solutions</span>
+            </h2>
+          </AnimatedText>
 
-          <p className="mt-6 text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl">
-            Hayleys Fibre is a subsidiary of Sri Lanka’s award-winning blue-chip
-            conglomerate Hayleys PLC, operating under the Eco Solutions sector.
-            We are a leading global manufacturer and exporter of 100%
-            biodegradable coir-based products, delivering over 400 innovative
-            and tailor-made solutions to diverse customers across the world
-            through accessible global channels.
-          </p>
+          <AnimatedText>
+            <p className="mt-6 text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl">
+              Hayleys Fibre is a subsidiary of Sri Lanka’s award-winning blue-chip
+              conglomerate Hayleys PLC, operating under the Eco Solutions sector.
+              We are a leading global manufacturer and exporter of 100%
+              biodegradable coir-based products, delivering over 400 innovative
+              and tailor-made solutions to diverse customers across the world
+              through accessible global channels.
+            </p>
+          </AnimatedText>
         </div>
 
         {/* RIGHT CONTENT */}
@@ -32,25 +40,33 @@ export default function AboutSection() {
           
           {/* Vision Card */}
           <div className="bg-green-700 text-white p-6 sm:p-8 md:p-10">
-            <h3 className="font-semibold text-lg sm:text-xl mb-3">
-              Vision
-            </h3>
-            <p className="text-sm sm:text-base leading-relaxed text-white/90">
-              To be the leading provider of innovative, sustainable and
-              environmentally-friendly products and solutions.
-            </p>
+            <AnimatedText>
+              <h3 className="font-semibold text-lg sm:text-xl mb-3">
+                Vision
+              </h3>
+            </AnimatedText>
+            <AnimatedText>
+              <p className="text-sm sm:text-base leading-relaxed text-white/90">
+                To be the leading provider of innovative, sustainable and
+                environmentally-friendly products and solutions.
+              </p>
+            </AnimatedText>
           </div>
 
           {/* Mission Card */}
           <div className="bg-green-700 text-white p-6 sm:p-8 md:p-10">
-            <h3 className="font-semibold text-lg sm:text-xl mb-3">
-              Mission
-            </h3>
-            <p className="text-sm sm:text-base leading-relaxed text-white/90">
-              To be the globally preferred choice by delivering value to all
-              stakeholders through a range of sustainable and
-              environmentally-friendly products and solutions.
-            </p>
+            <AnimatedText>
+              <h3 className="font-semibold text-lg sm:text-xl mb-3">
+                Mission
+              </h3>
+            </AnimatedText>
+            <AnimatedText>
+              <p className="text-sm sm:text-base leading-relaxed text-white/90">
+                To be the globally preferred choice by delivering value to all
+                stakeholders through a range of sustainable and
+                environmentally-friendly products and solutions.
+              </p>
+            </AnimatedText>
           </div>
 
         </div>

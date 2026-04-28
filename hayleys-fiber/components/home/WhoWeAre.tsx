@@ -3,6 +3,7 @@
 import Image from "next/image";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import AnimatedText from "../AnimatedText";
 
 export default function WhoWeAre() {
   const { ref, inView } = useInView({
@@ -18,16 +19,20 @@ export default function WhoWeAre() {
         
         {/* LEFT CONTENT */}
         <div className="text-center md:text-left">
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-black mb-6 md:mb-8">
-            Who We Are?
-          </h2>
+          <AnimatedText>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-black mb-6 md:mb-8">
+              Who We Are?
+            </h2>
+          </AnimatedText>
 
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-8 md:mb-10 max-w-full md:max-w-xl mx-auto md:mx-0">
-            “Hayleys Fibre is a global leader in sustainable coconut fibre
-            solutions, delivering innovative products and end-to-end services
-            across bio-engineering, horticulture, and industrial applications to
-            a diverse customer base spanning over 40 countries.”
-          </p>
+          <AnimatedText>
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-8 md:mb-10 max-w-full md:max-w-xl mx-auto md:mx-0">
+              “Hayleys Fibre is a global leader in sustainable coconut fibre
+              solutions, delivering innovative products and end-to-end services
+              across bio-engineering, horticulture, and industrial applications to
+              a diverse customer base spanning over 40 countries.”
+            </p>
+          </AnimatedText>
 
           <button className="bg-[#c5a46d] text-black px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-medium hover:opacity-90 transition">
             Read More
@@ -59,10 +64,12 @@ export default function WhoWeAre() {
           {/* HEADER */}
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-12 md:mb-16 gap-6 md:gap-8 text-center md:text-left">
             
-            <h3 className="text-2xl sm:text-3xl md:text-5xl font-light leading-tight">
-              Built on <span className="font-semibold">Legacy.</span><br />
-              Driven by <span className="font-semibold">Scale.</span>
-            </h3>
+            <AnimatedText>
+              <h3 className="text-2xl sm:text-3xl md:text-5xl font-light leading-tight">
+                Built on <span className="font-semibold">Legacy.</span><br />
+                Driven by <span className="font-semibold">Scale.</span>
+              </h3>
+            </AnimatedText>
 
             <button className="bg-green-700 px-6 sm:px-8 py-3 sm:py-4 text-sm font-medium hover:bg-green-800 transition whitespace-nowrap">
               Make an inquiry
@@ -81,9 +88,11 @@ export default function WhoWeAre() {
                 {inView && <CountUp end={140} duration={2} />}
                 <span className="text-[#c5a46d]">+</span>
               </h4>
-              <p className="text-gray-400 text-xs sm:text-sm mt-2 md:mt-3">
-                Worldwide Excellence
-              </p>
+              <AnimatedText>
+                <p className="text-gray-400 text-xs sm:text-sm mt-2 md:mt-3">
+                  Worldwide Excellence
+                </p>
+              </AnimatedText>
             </div>
 
             <div className="flex flex-col items-center">
@@ -91,9 +100,11 @@ export default function WhoWeAre() {
                 {inView && <CountUp end={300} duration={2} />}
                 <span className="text-[#c5a46d]">+</span>
               </h4>
-              <p className="text-gray-400 text-xs sm:text-sm mt-2 md:mt-3">
-                Global Customers
-              </p>
+              <AnimatedText>
+                <p className="text-gray-400 text-xs sm:text-sm mt-2 md:mt-3">
+                  Global Customers
+                </p>
+              </AnimatedText>
             </div>
 
             <div className="flex flex-col items-center">
@@ -101,9 +112,11 @@ export default function WhoWeAre() {
                 {inView && <CountUp end={10} duration={2} />}
                 <span className="text-[#c5a46d]">+</span>
               </h4>
-              <p className="text-gray-400 text-xs sm:text-sm mt-2 md:mt-3">
-                Production Facilities
-              </p>
+              <AnimatedText>
+                <p className="text-gray-400 text-xs sm:text-sm mt-2 md:mt-3">
+                  Production Facilities
+                </p>
+              </AnimatedText>
             </div>
 
             <div className="flex flex-col items-center">
@@ -111,9 +124,11 @@ export default function WhoWeAre() {
                 {inView && <CountUp end={400} duration={2.5} />}
                 <span className="text-[#c5a46d]">+</span>
               </h4>
-              <p className="text-gray-400 text-xs sm:text-sm mt-2 md:mt-3">
-                Product Variants
-              </p>
+              <AnimatedText>
+                <p className="text-gray-400 text-xs sm:text-sm mt-2 md:mt-3">
+                  Product Variants
+                </p>
+              </AnimatedText>
             </div>
 
           </div>

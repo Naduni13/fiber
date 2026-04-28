@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import AnimatedText from "../AnimatedText";
 
 export default function Hero() {
   return (
@@ -20,19 +21,23 @@ export default function Hero() {
       {/* Content - pushed down even more buhahaha */}
       <div className="relative z-10 flex items-center h-full px-6 sm:px-10 md:px-16 lg:px-24">
         <div className="max-w-xl mt-32 md:mt-40">
-          <h1 className="text-white font-medium leading-tight 
-                         text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            Fibre from Nature.
-            <br />
-            Value for Life.
-          </h1>
+          <AnimatedText>
+            <h1 className="text-white font-medium leading-tight 
+                           text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+              Fibre from Nature.
+              <br />
+              Value for Life.
+            </h1>
+          </AnimatedText>
 
-          <p className="mt-4 text-white/90 
-                        text-sm sm:text-base md:text-lg 
-                        leading-relaxed max-w-md">
-            Sustainable coir solutions built on people, planet, and profit –
-            serving businesses across five continents.
-          </p>
+          <AnimatedText>
+            <p className="mt-4 text-white/90 
+                          text-sm sm:text-base md:text-lg 
+                          leading-relaxed max-w-md">
+              Sustainable coir solutions built on people, planet, and profit –
+              serving businesses across five continents.
+            </p>
+          </AnimatedText>
         </div>
       </div>
     </section>
