@@ -1,8 +1,8 @@
-import About from "@/component/About/Hero";
-import AboutSection from "@/component/About/AboutSection";
-import Sustainability from "@/component/About/Sustainability";
-import Strengths from "@/component/About/Strengths";
-import History from "@/component/About/History";
+import About from "@/components/About/Hero";
+import AboutSection from "@/components/About/AboutSection";
+import Sustainability from "@/components/About/Sustainability";
+import Strengths from "@/components/About/Strengths";
+import History from "@/components/About/History";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Nav";
 
