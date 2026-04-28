@@ -32,15 +32,15 @@ export default function HomeHero() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
           <AnimatedText>
             <h1 className="text-white text-6xl md:text-7xl lg:text-8xl leading-[1.1] max-w-2xl">
-  Global Eco <br /> Solutions
+  Welcome to <br /> Hayleys Fibre
 </h1>
           </AnimatedText>
 
-          <AnimatedText>
+          {/* <AnimatedText>
             <p className="text-white/80 mt-4 text-lg">
               Powered by Coconut Fiber
             </p>
-          </AnimatedText>
+          </AnimatedText> */}
 
           <button className="mt-6 bg-[#c7a26a] text-black px-6 py-3 w-fit font-medium hover:opacity-90 transition">
             Explore Products
