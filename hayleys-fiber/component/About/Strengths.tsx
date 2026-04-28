@@ -38,7 +38,7 @@ export default function Strengths() {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-center text-4xl font-bold text-gray-900 mb-14">
-          Our Key <span className="text-green-600">Strengths</span>
+          Our Key <span className="text-green-700">Strengths</span>
         </h2>
 
         {/* Cards */}

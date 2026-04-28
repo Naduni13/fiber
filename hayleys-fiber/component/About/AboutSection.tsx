@@ -2,7 +2,7 @@
 
 export default function AboutSection() {
   return (
-    <section className="w-full bg-[#f5f5f3] py-16 sm:py-20 md:py-24 px-6 sm:px-10 md:px-16 lg:px-24">
+    <section className="w-full bg-white py-16 sm:py-20 md:py-24 px-6 sm:px-10 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         
         {/* LEFT CONTENT */}
@@ -31,7 +31,7 @@ export default function AboutSection() {
         <div className="flex flex-col gap-6">
           
           {/* Vision Card */}
-          <div className="bg-[#3f6f45] text-white p-6 sm:p-8 md:p-10">
+          <div className="bg-green-700 text-white p-6 sm:p-8 md:p-10">
             <h3 className="font-semibold text-lg sm:text-xl mb-3">
               Vision
             </h3>
@@ -42,7 +42,7 @@ export default function AboutSection() {
           </div>
 
           {/* Mission Card */}
-          <div className="bg-[#3f6f45] text-white p-6 sm:p-8 md:p-10">
+          <div className="bg-green-700 text-white p-6 sm:p-8 md:p-10">
             <h3 className="font-semibold text-lg sm:text-xl mb-3">
               Mission
             </h3>
