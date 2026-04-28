@@ -21,7 +21,7 @@ export default function Sustainability() {
             protecting communities, and shrinking our carbon footprint.
           </p>
 
-          <button className="mt-6 bg-[#b7a57a] text-black px-6 py-3 text-sm font-medium hover:opacity-90 transition">
+          <button className="mt-6 bg-[#c5a46d] text-black px-6 py-3 text-sm font-medium hover:opacity-90 transition">
             Read More
           </button>
 

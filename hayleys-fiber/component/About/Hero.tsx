@@ -7,19 +7,19 @@ export default function Hero() {
     <section className="relative w-full h-[80vh] md:h-screen overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/hero-about.jpg" // <-- replace with your coconut forest image
+        src="/hero-about.jpg"
         alt="Coconut Forest"
         fill
         priority
         className="object-cover object-center"
       />
 
-      {/* Overlay (for readability) */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
 
-      {/* Content */}
+      {/* Content - pushed down even more buhahaha */}
       <div className="relative z-10 flex items-center h-full px-6 sm:px-10 md:px-16 lg:px-24">
-        <div className="max-w-xl">
+        <div className="max-w-xl mt-32 md:mt-40">
           <h1 className="text-white font-medium leading-tight 
                          text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             Fibre from Nature.
